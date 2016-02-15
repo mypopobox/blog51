@@ -24,7 +24,7 @@ get('admin', function()	{
 	return redirect('/admin/post');
 });
 
-$router->group(['namespace' => 'Admin'. 'middleware' => 'auth'], function(){
+$router->group(['namespace' => 'Admin', 'middleware' => 'auth'], function(){
 	resource('admin/post', 'PostController');
 	resource('admin/tag', 'TagController');
 	get('admin/upload', 'UploadController@index');

@@ -9,7 +9,7 @@
 					<div class="panel-body">
 
 					@include('admin.partials.errors')
-					<form class="form-horizontal" role="form" method="post" action="{{ url('/auth/login')}}">
+					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login')}}">
 							<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<div class="form-group">
 							<label class="col-md-4 control-label">E-Mail Address</label>
@@ -28,7 +28,9 @@
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
 								<div class="checkbox">
-									<label><input type="checkbox" name="remember">Remember Me</label>
+									<label>
+										<input type="checkbox" name="remember">Remember Me
+									</label>
 								</div>	
 							</div>
 						</div>
